@@ -1,0 +1,91 @@
+/* 1. Reset et Police */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--gold: #c78c06;
+--light-yellow: #ffe6ac;
+--dark-text: #222;
+--white: #ffffff;
+}
+
+body {
+font-family: 'Open Sans', sans-serif;
+color: var(--dark-text);
+line-height: 1.6;
+background-color: var(--white);
+}
+
+/* 2. Layout global */
+header, footer {
+background-color: var(--light-yellow);
+padding: 20px;
+}
+
+/* Flexbox pour le header/nav */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* 3. Images (pour qu'elles soient propres) */
+img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+/* 4. Sections */
+section {
+padding: 40px 20px;
+}
+
+h1, h2, h3 {
+color: var(--gold);
+margin-bottom: 15px;
+}
+
+/* 5. Grille de Services (CSS Grid) */
+.services-container {
+display: grid;
+grid-template-columns: 1fr; /* 1 colonne sur mobile */
+gap: 20px;
+}
+
+.service-card {
+border: 2px solid var(--gold);
+padding: 15px;
+}
+
+/* 6. Formulaire & Map */
+.map-container {
+border: 3px solid var(--gold);
+margin-top: 20px;
+padding: 5px;
+}
+
+.map-container iframe {
+width: 100%;
+height: 300px;
+border: none;
+}
+
+/* 7. Responsivité (760px et plus) */
+@media (min-width: 760px) {
+body {
+max-width: 1200px;
+margin: 0 auto; /* Centre le site */
+}
+
+/* Grille de services passe à 2 colonnes */
+.services-container {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
